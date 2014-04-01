@@ -21,8 +21,8 @@
 		$contactmethods['facebook'] = 'Facebook';
 		return $contactmethods;
 	});
-	
-	
+
+
 	add_action('admin_menu', function() use (&$current_user){
 		if ( in_array('developer', $current_user->roles) ){
 			add_options_page(__('All Settings'), __('All Settings'), 'developer', 'options.php');
@@ -36,7 +36,7 @@
 
 
 	add_action('init', function(){
-		$users = array('alex', 'cova', 'clau', 'juan', 'nori', 'pam', 'york');
+		$users = array('raul', 'miguel', 'alejandro');
 		array_map('create_usuario_maquilador', $users);
 	});
 
@@ -47,7 +47,7 @@
 	 */
 	function create_usuario_maquilador($user){
 		$password = wp_generate_password();
-		$user_id  = wp_create_user( $user, $password, "$user@losmaquiladores.com" );
+		$user_id  = wp_create_user( $user, $password, "$user@pcuervo.com" );
 		if ( is_int($user_id) ){
 			set_maquilador_role( $user_id );
 			wp_new_user_notification( $user_id, $password );
