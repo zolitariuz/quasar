@@ -7,19 +7,19 @@
 	add_action('init', function(){
 
 
-		// NOTICIAS
-		/*$labels = array(
-			'name'          => 'Noticias',
+		// CONTACTO
+		$labels = array(
+			'name'          => 'Contacto',
 			'singular_name' => 'Noticia',
-			'add_new'       => 'Nueva Noticia',
-			'add_new_item'  => 'Nueva Noticia',
-			'edit_item'     => 'Editar Noticia',
-			'new_item'      => 'Nueva Noticia',
+			'add_new'       => 'Nuevo Contacto',
+			'add_new_item'  => 'Nuevo Contacto',
+			'edit_item'     => 'Editar Contacto',
+			'new_item'      => 'Nuevo Contacto',
 			'all_items'     => 'Todas',
-			'view_item'     => 'Ver Noticia',
-			'search_items'  => 'Buscar Noticia',
+			'view_item'     => 'Ver Contacto',
+			'search_items'  => 'Buscar Contacto',
 			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Noticias'
+			'menu_name'     => 'Contacto'
 		);
 
 		$args = array(
@@ -29,7 +29,7 @@
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'noticias' ),
+			'rewrite'            => array( 'slug' => 'contacto' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -37,6 +37,6 @@
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
-		register_post_type( 'noticia', $args );*/
+		register_post_type( 'contacto', $args );
 
 	});

@@ -59,20 +59,34 @@ figure {margin: 0;}
 /*** FONTFACE ***/
 
 @font-face {
-  font-family: 'font';
-  src:  url('fonts/font.eot');
-  src:  url('fonts/font.eot?#iefix') format('embedded-opentype'),
-		url('fonts/font.woff') format('woff'),
-		url('fonts/font.ttf') format('truetype'),
-		url('fonts/font.svg#font') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'gotham-book';
+    src: url('fonts/gotham-book.eot');
+    src: url('fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-book.woff') format('woff'),
+         url('fonts/gotham-book.ttf') format('truetype'),
+         url('fonts/gotham-book.svg#gothambook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bitter';
+    src: url('fonts/bitter-regular-webfont.eot');
+    src: url('fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bitter-regular-webfont.woff') format('woff'),
+         url('fonts/bitter-regular-webfont.ttf') format('truetype'),
+         url('fonts/bitter-regular-webfont.svg#bitterregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 /*** VARIABLES ***/
 
 @claro: 	#fff;
-@highlight:	#1aa2dc;
+@obscuro: 	#333;
+@highlight:	#2a2b7a;
+@background:#d7d7d7;
 
 @twitter:     #2aa8df;
 @facebook:    #3c5a97;
@@ -86,7 +100,7 @@ figure {margin: 0;}
 
 /*** MIXINS ***/
 
-.font( @size: 14px, @line: 18px, @family: 'font'){
+.font( @size: 16px, @line: 22px, @family: 'bitter'){
 	font: @size / @line @family;
 }
 
@@ -140,10 +154,12 @@ figure {margin: 0;}
 .no-margin{ margin: 0 !important; }
 .no-margin-bottom{ margin-bottom: 0 !important; }
 
+.margin-bottom{ margin-bottom: @margen; }
+
 //layout
 .container{ min-width: 300px; }
-.width{ width: 90%; min-width: 300px; margin: 0 auto @margen auto; }
-.full{ width: 100%;
+.width{ width: 90%; min-width: 300px; margin-left: auto; margin-right: auto; }
+.full{ width: 100% !important;
   //img{ width: 100%; height: auto; }
 }
 
@@ -154,9 +170,7 @@ figure {margin: 0;}
 .first{ margin-left: 0; padding-left: 0; }
 .last{ margin-right: 0; padding-right: 0; }
 
-.columna{
-	float: left;
-	margin: 0 1%;
+.columna{ margin: 0 1%; float: left;
 
 	&.c-1{ width: 6.3%; }
 	&.c-2{ width: 14.6%; }
@@ -173,11 +187,12 @@ figure {margin: 0;}
 
 	&.grid{ background: @highlight; color: @claro; padding: @margen; text-align: center; }
 
-  img{ width: 100%; height: auto; margin: 0 0 @margen 0; }
+  img{ width: 100%; height: auto; }
 
 }
 
 .span{ float: left;
+
   &.c-1{ width: 8.3%; }
   &.c-2{ width: 16.6%; }
   &.c-3{ width: 24.9%; }
@@ -191,11 +206,15 @@ figure {margin: 0;}
   &.c-11{ width: 91.3%; }
   &.c-12{ width: 99.6%; }
 
-  img{ width: 100%; height: auto; margin: 0 0 @margen 0; }
+  img{ width: 100%; height: auto; }
 }
 
 //elementos
-p{ margin-bottom: 1em; }
+p{ margin-bottom: 1em;}
+
+.boton{ padding: (@margen/2); border: 1px solid @claro; cursor: pointer; text-decoration: none; text-align: center; text-transform: uppercase; color: @claro; .font(1em, 1em, 'gotham-book');
+	&.activo{ background: rgba(255,255,255,0.3); }
+}
 
 //caracteristicas
 .text-center{ text-align: center; }
@@ -209,17 +228,93 @@ p{ margin-bottom: 1em; }
 ::selection{ background: @highlight; color: @claro; }
 ::-moz-selection { background: @highlight; color: @claro; }
 
-body{ background: #fff; .font; }
+body, html{ width: 100%; height: 100%; background: @background; .font; color: @obscuro; }
+
+.centro{
+	h1{ margin: 0 0 @margen 0; }
+}
+
+.seccion{
+
+	h2{}
+
+	p{ width: 56.1%; margin: 0 auto (@margen*2) auto; }
+
+	img{ width: 81%; height: auto; display: block; margin: 0 auto (@margen*2) auto; }
+
+}
 
 /*** HEADER ***/
 
+header{}
+
+nav{
+
+	a{ margin-top: 4% !important; .font(1.5em, 1.5em, 'gotham-book'); text-transform: uppercase; text-align: center; text-decoration: none; color: @obscuro;
+		&:hover, &.activo{ color: @highlight; }
+	}
+
+	img{ margin-top: 2% !important; }
+
+	h1{ top: 0; }
+}
+
+h1{ margin: 0;
+	a{ display: block; width: 100%; height: 100%;
+		img{ }
+	}
+}
+
+h2{ .font(1.5em, 1.5em, 'gotham-book'); text-transform: uppercase; text-align: center; color: @highlight; }
+
+.post-preview{ margin-bottom: @margen; position: relative; background: @claro;
+	img{ width: 90%; margin: 5%; position: relative; z-index: 1; }
+	.malla{ width: 90%; height: 88%; background: rgba(0, 0, 0, 0.2); position: absolute; top: 6%; left: 5%; z-index: 2; }
+	.post-info{ width: 80%; position: absolute; bottom: 13%; left: 10%; z-index: 3;
+		h3{ margin: 0; .font(2em, 1em, 'bitter');
+			a{ color: @claro; text-decoration: none; }
+		}
+	}
+}
+
+/*** MAIN ***/
+
 /*** FOOTER ***/
 
-/*** MEDIA QUERIES ***/
+footer{ padding: @margen 0; border-top: 2px solid @highlight;
+	p{ text-align: center; .font(14px, 18px, 'gotham-book'); color: @highlight; }
+}
+
+/*** INTRO ***/
+.intro{ width: 100%; height: 100%; }
+
+.centro{ position: relative; top: 20%; left: 50%;
+	.centro-in{ position: relative; left: -50%; }
+}
+
+/*** CONTACTO ***/
+
+form{ margin-bottom: @margen !important;
+	label{ margin: 0 0 (@margen/2) 0; .font( 1.4em, 1em, 'gotham-book' ); color: @highlight; text-transform: uppercase;
+		&.error{ display: block; margin: 0 0 @margen 0; color: @warning; .font( 0.9em, 1em ); text-transform: none; }
+	}
+
+	input, textarea{ margin: 0 0 @margen 0; padding: (@margen/4); border: none; .font(); }
+
+	input{ height: (@margen*2);
+		&[type='text']{}
+		&[type='email']{}
+		&[type='submit']{ background: @highlight; color: @claro; text-transform: uppercase; .font( 1em, 1em, 'gotham-book' ); }
+	}
+
+	textarea{ height: (@margen*8); }
+}
+
+@media only screen and (min-width : 1240px) {
+	.width{ width: 80%; }
+}
 
 @media only screen and (max-width : 1024px) {
-
-
 
 }
 
