@@ -64,23 +64,23 @@
 				<header>
 					<nav class="width clearfix">
 
-						<a class="columna c-2" href="<?php echo home_url( 'q/proyectos' ); ?>">Proyectos</a>
+						<a class="columna c-2 <?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/proyectos' ); ?>">Proyectos</a>
 
 						<img class="separador columna c-1" src="<?php echo THEMEPATH; ?>/images/separador.png" alt="">
 
-						<a class="columna c-2" href="<?php echo home_url( 'q/clientes' ); ?>">Clientes</a>
+						<a class="columna c-2 <?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/clientes' ); ?>">Clientes</a>
 
 						<h1 class="columna c-2 logo" >
-							<a class="span c-6 center" href="#">
+							<a class="span c-6 center" href="<?php echo home_url(); ?>">
 								<img src="<?php echo THEMEPATH; ?>/images/logo-quasar.png" alt="" />
 							</a>
 						</h1>
 
-						<a class="columna c-2" href="<?php echo home_url( 'nosotros' ); ?>">Nosotros</a>
+						<a class="columna c-2 <?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'nosotros' ); ?>">Nosotros</a>
 
 						<img class="separador columna c-1" src="<?php echo THEMEPATH; ?>/images/separador.png" alt="">
 
-						<a class="columna c-2" href="<?php echo home_url( 'contacto' ); ?>">Contacto</a>
+						<a class="columna c-2 <?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'contacto' ); ?>">Contacto</a>
 
 					</nav>
 

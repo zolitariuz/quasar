@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+	get_header();
+	the_post();
+?>
 
 	<div class="seccion processing">
 
