@@ -250,7 +250,7 @@ header{}
 
 nav{
 
-	a{ margin-top: 4% !important; .font(1.5em, 1.5em, 'gotham-book'); text-transform: uppercase; text-align: center; text-decoration: none; color: @obscuro;
+	a{ margin-top: 4% !important; .font(1.2em, 1.2em, 'gotham-book'); text-transform: uppercase; text-align: center; text-decoration: none; color: @obscuro;
 		&:hover, &.activo{ color: @highlight; }
 	}
 
@@ -360,6 +360,16 @@ form{ margin-bottom: @margen !important;
 	.medium{ display: block; }
 	.no-medium{ display: none; }
 
+	nav{
+		a{ .font(.8em, .8em, 'gotham-book'); 
+			&:hover, &.activo{ color: @highlight; }
+		}
+	}
+
+	.seccion {
+		p{ width: 74.7%;}
+	}
+
 }
 
 @media only screen and (max-device-width : 768px) {
@@ -411,6 +421,28 @@ form{ margin-bottom: @margen !important;
 
 	.small{ display: block; }
 	.no-small{ display: none; }
+
+	nav{
+		a{ margin-top:0 !important; .font(0.8em, 3.0em, 'gotham-book'); 
+			&:hover, &.activo{ color: @claro; background: @highlight }
+		}
+	}
+
+	p { padding:10px; .font(1em, 1.2em); text-align: left;}
+
+	.seccion {
+		p{ width: 91.33%;}
+	}
+
+	form {
+		label { .font(1em, 1.2em, 'gotham-book'); }
+	}
+	
+	footer{ 
+		p{ .font(12px, 14px, 'gotham-book');  }
+	}
+
+
 
 }
 

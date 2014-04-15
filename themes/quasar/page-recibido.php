@@ -9,7 +9,7 @@
 	$post = array(
 		'post_content' 	=> $mensaje,
 		'post_title' 	=> "Mensaje de $nombre",
-		'post_type' 	=> 'contacto'
+		'post_type' 	=> 'forma-contacto'
 	);
 
 	wp_insert_post( $post );

@@ -1,1 +1,817 @@
-@charset 'utf-8';html{color:#000;background:#fff}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}h1,h2,h3{margin:1em 0}h1,h2,h3,h4,h5,h6,strong{font-weight:bold}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}blockquote,ul,ol,dl{margin:1em}ol,ul,dl{margin-left:2em}ol{list-style:decimal outside}ul{list-style:disc outside}dl dd{margin-left:1em}th,td{border:1px solid #000;padding:.5em}th{font-weight:bold;text-align:center}caption{margin-bottom:.5em;text-align:center}p,fieldset,table,pre{margin-bottom:1em}input[type=text],input[type=password],textarea{width:12.25em;*width:11.9em}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}figure{margin:0}.lst_reset,.lst_reset li{margin:0;padding:0;list-style:none}.clear{clear:both;height:1px;margin:0;padding:0;font-size:1px;line-height:0}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}@font-face{font-family:'gotham-book';src:url('fonts/gotham-book.eot');src:url('fonts/gotham-book.eot?#iefix') format('embedded-opentype'),url('fonts/gotham-book.woff') format('woff'),url('fonts/gotham-book.ttf') format('truetype'),url('fonts/gotham-book.svg#gothambook') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'bitter';src:url('fonts/bitter-regular-webfont.eot');src:url('fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/bitter-regular-webfont.woff') format('woff'),url('fonts/bitter-regular-webfont.ttf') format('truetype'),url('fonts/bitter-regular-webfont.svg#bitterregular') format('svg');font-weight:normal;font-style:normal}.hide{display:none}.block{display:block !important}.text-center{text-align:center}.no-margin{margin:0 !important}.no-margin-bottom{margin-bottom:0 !important}.margin-bottom{margin-bottom:20px}.container{min-width:300px}.width{width:90%;min-width:300px;margin-left:auto;margin-right:auto}.full{width:100% !important}.center{margin-left:auto !important;margin-right:auto !important;float:none !important}.left{float:left !important}.right{float:right !important}.first{margin-left:0;padding-left:0}.last{margin-right:0;padding-right:0}.columna{margin:0 1%;float:left}.columna.c-1{width:6.3%}.columna.c-2{width:14.6%}.columna.c-3{width:22.9%}.columna.c-4{width:31.2%}.columna.c-5{width:39.5%}.columna.c-6{width:47.8%}.columna.c-7{width:56.1%}.columna.c-8{width:64.4%}.columna.c-9{width:72.7%}.columna.c-10{width:81%}.columna.c-11{width:89.3%}.columna.c-12{width:97.6%}.columna.grid{background:#2a2b7a;color:#fff;padding:20px;text-align:center}.columna img{width:100%;height:auto}.span{float:left}.span.c-1{width:8.3%}.span.c-2{width:16.6%}.span.c-3{width:24.9%}.span.c-4{width:33.2%}.span.c-5{width:41.5%}.span.c-6{width:49.8%}.span.c-7{width:58.1%}.span.c-8{width:66.4%}.span.c-9{width:74.7%}.span.c-10{width:83%}.span.c-11{width:91.3%}.span.c-12{width:99.6%}.span img{width:100%;height:auto}p{margin-bottom:1em}.boton{padding:10px;border:1px solid #fff;cursor:pointer;text-decoration:none;text-align:center;text-transform:uppercase;color:#fff;font:1em / 1em 'gotham-book'}.boton.activo{background:rgba(255,255,255,0.3)}.text-center{text-align:center}.small{display:none}::selection{background:#2a2b7a;color:#fff}::-moz-selection{background:#2a2b7a;color:#fff}body,html{width:100%;height:100%;background:#d7d7d7;font:16px / 22px 'bitter';color:#333}.centro h1{margin:0 0 20px 0}.seccion p{width:56.1%;margin:0 auto 40px auto}.seccion img{width:81%;height:auto;display:block;margin:0 auto 40px auto}nav a{margin-top:4% !important;font:1.5em / 1.5em 'gotham-book';text-transform:uppercase;text-align:center;text-decoration:none;color:#333}nav a:hover,nav a.activo{color:#2a2b7a}nav img{margin-top:2% !important}nav h1{top:0}h1{margin:0}h1 a{display:block;width:100%;height:100%}h2{font:1.5em / 1.5em 'gotham-book';text-transform:uppercase;text-align:center;color:#2a2b7a}.post-preview{margin-bottom:20px;position:relative;background:#fff}.post-preview img{width:90%;margin:5%;position:relative;z-index:1}.post-preview .malla{width:90%;height:88%;background:rgba(0,0,0,0.2);position:absolute;top:6%;left:5%;z-index:2}.post-preview .post-info{width:80%;position:absolute;bottom:13%;left:10%;z-index:3}.post-preview .post-info h3{margin:0;font:2em / 1em 'bitter'}.post-preview .post-info h3 a{color:#fff;text-decoration:none}footer{padding:20px 0;border-top:2px solid #2a2b7a}footer p{text-align:center;font:14px / 18px 'gotham-book';color:#2a2b7a}.intro{width:100%;height:100%}.centro{position:relative;top:20%;left:50%}.centro .centro-in{position:relative;left:-50%}form{margin-bottom:20px !important}form label{margin:0 0 10px 0;font:1.4em / 1em 'gotham-book';color:#2a2b7a;text-transform:uppercase}form label.error{display:block;margin:0 0 20px 0;color:#e74c3c;font:.9em / 1em 'bitter';text-transform:none}form input,form textarea{margin:0 0 20px 0;padding:5px;border:none;font:16px / 22px 'bitter'}form input{height:40px}form input[type='submit']{background:#2a2b7a;color:#fff;text-transform:uppercase;font:1em / 1em 'gotham-book'}form textarea{height:160px}@media only screen and (min-width:1240px){.width{width:80%}}@media only screen and (max-width:768px){.columna.medium-1{width:6.3%}.columna.medium-2{width:14.6%}.columna.medium-3{width:22.9%}.columna.medium-4{width:31.2%}.columna.medium-5{width:39.5%}.columna.medium-6{width:47.8%}.columna.medium-7{width:56.1%}.columna.medium-8{width:64.4%}.columna.medium-9{width:72.7%}.columna.medium-10{width:81%}.columna.medium-11{width:89.3%}.columna.medium-12{width:97.6%}.span.medium-1{width:8.3%}.span.medium-2{width:16.6%}.span.medium-3{width:24.9%}.span.medium-4{width:33.2%}.span.medium-5{width:41.5%}.span.medium-6{width:49.8%}.span.medium-7{width:58.1%}.span.medium-8{width:66.4%}.span.medium-9{width:74.7%}.span.medium-10{width:83%}.span.medium-11{width:91.3%}.span.medium-12{width:99.6%}.medium{display:block}.no-medium{display:none}}@media only screen and (max-width:480px){.columna.small-1{width:6.3%}.columna.small-2{width:14.6%}.columna.small-3{width:22.9%}.columna.small-4{width:31.2%}.columna.small-5{width:39.5%}.columna.small-6{width:47.8%}.columna.small-7{width:56.1%}.columna.small-8{width:64.4%}.columna.small-9{width:72.7%}.columna.small-10{width:81%}.columna.small-11{width:89.3%}.columna.small-12{width:97.6%}.span.small-1{width:8.3%}.span.small-2{width:16.6%}.span.small-3{width:24.9%}.span.small-4{width:33.2%}.span.small-5{width:41.5%}.span.small-6{width:49.8%}.span.small-7{width:58.1%}.span.small-8{width:66.4%}.span.small-9{width:74.7%}.span.small-10{width:83%}.span.small-11{width:91.3%}.span.small-12{width:99.6%}.small{display:block}.no-small{display:none}}
+/*
+Theme Name: Quasar Audiovisual
+Theme URI: http://quasaraudiovisual.com
+Author: @zolitariuz at Pequeño Cuervo
+Author URI: http://pcuervo.com
+Description: Tema de WordPress Personalizado
+Version: 1.0
+*/
+@charset 'utf-8';
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html {
+  color: #000;
+  background: #ffffff;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+legend {
+  color: #000000;
+}
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+body {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif;
+  *font-size: small;
+  *font: x-small;
+}
+select,
+input,
+button,
+textarea {
+  font: 99% arial, helvetica, clean, sans-serif;
+}
+table {
+  font-size: inherit;
+  font: 100%;
+}
+pre,
+code,
+kbd,
+samp,
+tt {
+  font-family: monospace;
+  *font-size: 108%;
+  line-height: 100%;
+}
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+h1 {
+  font-size: 138.5%;
+}
+h2 {
+  font-size: 123.1%;
+}
+h3 {
+  font-size: 108%;
+}
+h1,
+h2,
+h3 {
+  margin: 1em 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: bold;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+em {
+  font-style: italic;
+}
+blockquote,
+ul,
+ol,
+dl {
+  margin: 1em;
+}
+ol,
+ul,
+dl {
+  margin-left: 2em;
+}
+ol {
+  list-style: decimal outside;
+}
+ul {
+  list-style: disc outside;
+}
+dl dd {
+  margin-left: 1em;
+}
+th,
+td {
+  border: 1px solid #000;
+  padding: 0.5em;
+}
+th {
+  font-weight: bold;
+  text-align: center;
+}
+caption {
+  margin-bottom: .5em;
+  text-align: center;
+}
+p,
+fieldset,
+table,
+pre {
+  margin-bottom: 1em;
+}
+input[type=text],
+input[type=password],
+textarea {
+  width: 12.25em;
+  *width: 11.9em;
+}
+/*HTML5 element display*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+/*Figures*/
+figure {
+  margin: 0;
+}
+/* Utilities */
+.lst_reset,
+.lst_reset li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clear {
+  clear: both;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  line-height: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* clearfix for modern browsers */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+  zoom: 1;
+}
+/*** FONTFACE ***/
+@font-face {
+  font-family: 'gotham-book';
+  src: url('fonts/gotham-book.eot');
+  src: url('fonts/gotham-book.eot?#iefix') format('embedded-opentype'), url('fonts/gotham-book.woff') format('woff'), url('fonts/gotham-book.ttf') format('truetype'), url('fonts/gotham-book.svg#gothambook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bitter';
+  src: url('fonts/bitter-regular-webfont.eot');
+  src: url('fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/bitter-regular-webfont.woff') format('woff'), url('fonts/bitter-regular-webfont.ttf') format('truetype'), url('fonts/bitter-regular-webfont.svg#bitterregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*** VARIABLES ***/
+/*** MIXINS ***/
+/*** FRAMEWORK ***/
+.hide {
+  display: none;
+}
+.block {
+  display: block !important;
+}
+.text-center {
+  text-align: center;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+.margin-bottom {
+  margin-bottom: 20px;
+}
+.container {
+  min-width: 300px;
+}
+.width {
+  width: 90%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.full {
+  width: 100% !important;
+}
+.center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+.first {
+  margin-left: 0;
+  padding-left: 0;
+}
+.last {
+  margin-right: 0;
+  padding-right: 0;
+}
+.columna {
+  margin: 0 1%;
+  float: left;
+}
+.columna.c-1 {
+  width: 6.3%;
+}
+.columna.c-2 {
+  width: 14.6%;
+}
+.columna.c-3 {
+  width: 22.9%;
+}
+.columna.c-4 {
+  width: 31.2%;
+}
+.columna.c-5 {
+  width: 39.5%;
+}
+.columna.c-6 {
+  width: 47.8%;
+}
+.columna.c-7 {
+  width: 56.1%;
+}
+.columna.c-8 {
+  width: 64.4%;
+}
+.columna.c-9 {
+  width: 72.7%;
+}
+.columna.c-10 {
+  width: 81%;
+}
+.columna.c-11 {
+  width: 89.3%;
+}
+.columna.c-12 {
+  width: 97.6%;
+}
+.columna.grid {
+  background: #2a2b7a;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+.columna img {
+  width: 100%;
+  height: auto;
+}
+.span {
+  float: left;
+}
+.span.c-1 {
+  width: 8.3%;
+}
+.span.c-2 {
+  width: 16.6%;
+}
+.span.c-3 {
+  width: 24.9%;
+}
+.span.c-4 {
+  width: 33.2%;
+}
+.span.c-5 {
+  width: 41.5%;
+}
+.span.c-6 {
+  width: 49.8%;
+}
+.span.c-7 {
+  width: 58.1%;
+}
+.span.c-8 {
+  width: 66.4%;
+}
+.span.c-9 {
+  width: 74.7%;
+}
+.span.c-10 {
+  width: 83%;
+}
+.span.c-11 {
+  width: 91.3%;
+}
+.span.c-12 {
+  width: 99.6%;
+}
+.span img {
+  width: 100%;
+  height: auto;
+}
+p {
+  margin-bottom: 1em;
+}
+.boton {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font: 1em / 1em 'gotham-book';
+}
+.boton.activo {
+  background: rgba(255, 255, 255, 0.3);
+}
+.text-center {
+  text-align: center;
+}
+.small {
+  display: none;
+}
+/*** GENERAL ***/
+::selection {
+  background: #2a2b7a;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #2a2b7a;
+  color: #ffffff;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #d7d7d7;
+  font: 16px / 22px 'bitter';
+  color: #333333;
+}
+.centro h1 {
+  margin: 0 0 20px 0;
+}
+.seccion p {
+  width: 56.1%;
+  margin: 0 auto 40px auto;
+}
+.seccion img {
+  width: 81%;
+  height: auto;
+  display: block;
+  margin: 0 auto 40px auto;
+}
+/*** HEADER ***/
+nav a {
+  margin-top: 4% !important;
+  font: 1.2em / 1.2em 'gotham-book';
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #333333;
+}
+nav a:hover,
+nav a.activo {
+  color: #2a2b7a;
+}
+nav img {
+  margin-top: 2% !important;
+}
+nav h1 {
+  top: 0;
+}
+h1 {
+  margin: 0;
+}
+h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+h2 {
+  font: 1.5em / 1.5em 'gotham-book';
+  text-transform: uppercase;
+  text-align: center;
+  color: #2a2b7a;
+}
+.post-preview {
+  margin-bottom: 20px;
+  position: relative;
+  background: #ffffff;
+}
+.post-preview img {
+  width: 90%;
+  margin: 5%;
+  position: relative;
+  z-index: 1;
+}
+.post-preview .malla {
+  width: 90%;
+  height: 88%;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  z-index: 2;
+}
+.post-preview .post-info {
+  width: 80%;
+  position: absolute;
+  bottom: 13%;
+  left: 10%;
+  z-index: 3;
+}
+.post-preview .post-info h3 {
+  margin: 0;
+  font: 2em / 1em 'bitter';
+}
+.post-preview .post-info h3 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+/*** MAIN ***/
+/*** FOOTER ***/
+footer {
+  padding: 20px 0;
+  border-top: 2px solid #2a2b7a;
+}
+footer p {
+  text-align: center;
+  font: 14px / 18px 'gotham-book';
+  color: #2a2b7a;
+}
+/*** INTRO ***/
+.intro {
+  width: 100%;
+  height: 100%;
+}
+.centro {
+  position: relative;
+  top: 20%;
+  left: 50%;
+}
+.centro .centro-in {
+  position: relative;
+  left: -50%;
+}
+/*** CONTACTO ***/
+form {
+  margin-bottom: 20px !important;
+}
+form label {
+  margin: 0 0 10px 0;
+  font: 1.4em / 1em 'gotham-book';
+  color: #2a2b7a;
+  text-transform: uppercase;
+}
+form label.error {
+  display: block;
+  margin: 0 0 20px 0;
+  color: #e74c3c;
+  font: 0.9em / 1em 'bitter';
+  text-transform: none;
+}
+form input,
+form textarea {
+  margin: 0 0 20px 0;
+  padding: 5px;
+  border: none;
+  font: 16px / 22px 'bitter';
+}
+form input {
+  height: 40px;
+}
+form input[type='submit'] {
+  background: #2a2b7a;
+  color: #ffffff;
+  text-transform: uppercase;
+  font: 1em / 1em 'gotham-book';
+}
+form textarea {
+  height: 160px;
+}
+@media only screen and (min-width: 1240px) {
+  .width {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .columna.medium-1 {
+    width: 6.3%;
+  }
+  .columna.medium-2 {
+    width: 14.6%;
+  }
+  .columna.medium-3 {
+    width: 22.9%;
+  }
+  .columna.medium-4 {
+    width: 31.2%;
+  }
+  .columna.medium-5 {
+    width: 39.5%;
+  }
+  .columna.medium-6 {
+    width: 47.8%;
+  }
+  .columna.medium-7 {
+    width: 56.1%;
+  }
+  .columna.medium-8 {
+    width: 64.4%;
+  }
+  .columna.medium-9 {
+    width: 72.7%;
+  }
+  .columna.medium-10 {
+    width: 81%;
+  }
+  .columna.medium-11 {
+    width: 89.3%;
+  }
+  .columna.medium-12 {
+    width: 97.6%;
+  }
+  .span.medium-1 {
+    width: 8.3%;
+  }
+  .span.medium-2 {
+    width: 16.6%;
+  }
+  .span.medium-3 {
+    width: 24.9%;
+  }
+  .span.medium-4 {
+    width: 33.2%;
+  }
+  .span.medium-5 {
+    width: 41.5%;
+  }
+  .span.medium-6 {
+    width: 49.8%;
+  }
+  .span.medium-7 {
+    width: 58.1%;
+  }
+  .span.medium-8 {
+    width: 66.4%;
+  }
+  .span.medium-9 {
+    width: 74.7%;
+  }
+  .span.medium-10 {
+    width: 83%;
+  }
+  .span.medium-11 {
+    width: 91.3%;
+  }
+  .span.medium-12 {
+    width: 99.6%;
+  }
+  .medium {
+    display: block;
+  }
+  .no-medium {
+    display: none;
+  }
+  nav a {
+    font: 0.8em / 0.8em 'gotham-book';
+  }
+  nav a:hover,
+  nav a.activo {
+    color: #2a2b7a;
+  }
+  .seccion p {
+    width: 74.7%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .columna.small-1 {
+    width: 6.3%;
+  }
+  .columna.small-2 {
+    width: 14.6%;
+  }
+  .columna.small-3 {
+    width: 22.9%;
+  }
+  .columna.small-4 {
+    width: 31.2%;
+  }
+  .columna.small-5 {
+    width: 39.5%;
+  }
+  .columna.small-6 {
+    width: 47.8%;
+  }
+  .columna.small-7 {
+    width: 56.1%;
+  }
+  .columna.small-8 {
+    width: 64.4%;
+  }
+  .columna.small-9 {
+    width: 72.7%;
+  }
+  .columna.small-10 {
+    width: 81%;
+  }
+  .columna.small-11 {
+    width: 89.3%;
+  }
+  .columna.small-12 {
+    width: 97.6%;
+  }
+  .span.small-1 {
+    width: 8.3%;
+  }
+  .span.small-2 {
+    width: 16.6%;
+  }
+  .span.small-3 {
+    width: 24.9%;
+  }
+  .span.small-4 {
+    width: 33.2%;
+  }
+  .span.small-5 {
+    width: 41.5%;
+  }
+  .span.small-6 {
+    width: 49.8%;
+  }
+  .span.small-7 {
+    width: 58.1%;
+  }
+  .span.small-8 {
+    width: 66.4%;
+  }
+  .span.small-9 {
+    width: 74.7%;
+  }
+  .span.small-10 {
+    width: 83%;
+  }
+  .span.small-11 {
+    width: 91.3%;
+  }
+  .span.small-12 {
+    width: 99.6%;
+  }
+  .small {
+    display: block;
+  }
+  .no-small {
+    display: none;
+  }
+  nav a {
+    margin-top: 0 !important;
+    font: 0.8em / 3em 'gotham-book';
+  }
+  nav a:hover,
+  nav a.activo {
+    color: #ffffff;
+    background: #2a2b7a;
+  }
+  p {
+    padding: 10px;
+    font: 1em / 1.2em 'bitter';
+    text-align: left;
+  }
+  .seccion p {
+    width: 91.33%;
+  }
+  form label {
+    font: 1em / 1.2em 'gotham-book';
+  }
+  footer p {
+    font: 12px / 14px 'gotham-book';
+  }
+}

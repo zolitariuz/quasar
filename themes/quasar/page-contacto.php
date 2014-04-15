@@ -15,7 +15,7 @@
 
 			<h2>Contacto</h2>
 
-			<form action="<?php echo home_url('recibido'); ?>" method="post" class="columna c-8 center">
+			<form action="<?php echo home_url('recibido'); ?>" method="post" class="columna c-8 medium-10 small-12 center">
 
 				<label class="full block" for="nombre">Nombre</label>
 				<input class="full block required" name="nombre" type="text">
@@ -26,7 +26,7 @@
 				<label class="full block" for="mensaje">Mensaje</label>
 				<textarea class="full block required" name="mensaje" id=""></textarea>
 
-				<input class="block columna c-2 center" type="submit" value="enviar">
+				<input class="block columna c-3 center medium-6 small-12" type="submit" value="enviar">
 
 			</form>
 

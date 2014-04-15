@@ -3,10 +3,12 @@
 		<meta charset="utf-8">
 		<title><?php print_title(); ?></title>
 		<link rel="shortcut icon" href="<?php echo THEMEPATH; ?>images/favicon.ico">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="cleartype" content="on">
+
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<?php wp_head(); ?>
 	</head>
@@ -62,7 +64,7 @@
 			<div class="container">
 
 				<header>
-					<nav class="width clearfix">
+					<nav class="width clearfix no-small">
 
 						<a class="columna c-2 <?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/proyectos' ); ?>">Proyectos</a>
 
@@ -81,6 +83,29 @@
 						<img class="separador columna c-1" src="<?php echo THEMEPATH; ?>/images/separador.png" alt="">
 
 						<a class="columna c-2 <?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'contacto' ); ?>">Contacto</a>
+
+					</nav>
+
+					<!-- menú móvil -->
+					<h1 class="columna c-4 center logo small no-medium" >
+						<a class="span c-6 center" href="<?php echo home_url(); ?>">
+							<img src="<?php echo THEMEPATH; ?>/images/logo-quasar.png" alt="" />
+						</a>
+					</h1>
+
+					<div class="clear"></div>
+
+					<a href="#" class="width full text-center small no-medium btn-menu-movil">Menù</a>
+
+					<nav class="width clearfix menu-movil hide">
+
+						<a class="width full left <?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/proyectos' ); ?>">Proyectos</a>
+
+						<a class="width full left <?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/clientes' ); ?>">Clientes</a>
+
+						<a class="width full left <?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'nosotros' ); ?>">Nosotros</a>
+
+						<a class="width full left <?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'contacto' ); ?>">Contacto</a>
 
 					</nav>
 

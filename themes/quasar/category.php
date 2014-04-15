@@ -31,7 +31,7 @@
 			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 
-				<div class="post-preview columna c-4">
+				<div class="post-preview columna c-4 medium-6 small-12">
 
 					<?php the_post_thumbnail( 'full' ); ?>
 

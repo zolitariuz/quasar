@@ -208,7 +208,6 @@ add_filter('the_content', 'filter_ptags_on_images');
 	}
 
 
-
 	/**
 	 * Imprime una lista separada por commas de todos los terms asociados al post id especificado
 	 * los terms pertenecen a la taxonomia especificada. Default: Category

@@ -8,7 +8,7 @@
 
 	<div class="width clearfix">
 
-		<div class="columna c-8 text-center center">
+		<div class="columna c-8 medium-10 small-12 text-center center">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Claudii libidini, qui tum erat summo ne imperio, dederetur. Quos nisi redarguimus, omnis virtus, omne decus, omnis vera laus deserenda est. Quae autem natura suae primae institutionis oblita est. Minime vero, inquit ille, consentit. Duo Reges: constructio interrete. Primum cur ista res digna odio est, nisi quod est turpis.</p>
 		</div>
 
@@ -29,7 +29,7 @@
 			if( $proyectosQuery->have_posts() ) : while( $proyectosQuery->have_posts() ) : $proyectosQuery->the_post(); ?>
 
 
-				<div class="post-preview columna c-4">
+				<div class="post-preview columna c-4 medium-6 small-12">
 
 					<?php the_post_thumbnail( 'full' ); ?>
 
@@ -46,7 +46,6 @@
 				</div><!-- post-preview -->
 
 			<?php endwhile; endif; wp_reset_postdata(); ?>
-
 
 
 		</div><!-- seccion ultimos-proyectos -->

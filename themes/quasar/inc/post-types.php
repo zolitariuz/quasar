@@ -9,17 +9,17 @@
 
 		// CONTACTO
 		$labels = array(
-			'name'          => 'Contacto',
+			'name'          => 'Forma Contacto',
 			'singular_name' => 'Noticia',
-			'add_new'       => 'Nuevo Contacto',
-			'add_new_item'  => 'Nuevo Contacto',
-			'edit_item'     => 'Editar Contacto',
-			'new_item'      => 'Nuevo Contacto',
+			'add_new'       => 'Nuevo Forma Contacto',
+			'add_new_item'  => 'Nuevo Forma Contacto',
+			'edit_item'     => 'Editar Forma Contacto',
+			'new_item'      => 'Nuevo Forma Contacto',
 			'all_items'     => 'Todas',
-			'view_item'     => 'Ver Contacto',
-			'search_items'  => 'Buscar Contacto',
+			'view_item'     => 'Ver Forma Contacto',
+			'search_items'  => 'Buscar Forma Contacto',
 			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Contacto'
+			'menu_name'     => 'Forma Contacto'
 		);
 
 		$args = array(
@@ -29,7 +29,7 @@
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'contacto' ),
+			'rewrite'            => array( 'slug' => 'forma-contacto' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -37,6 +37,6 @@
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
-		register_post_type( 'contacto', $args );
+		register_post_type( 'forma-contacto', $args );
 
 	});
