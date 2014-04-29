@@ -35,5 +35,11 @@
 		});
 	}
 
+  	$('#responsive-menu-btn').sidr({
+  		name: 'sidr-main',
+  		source: '.sidr'
+  	});
+
+
 })(jQuery);
 
