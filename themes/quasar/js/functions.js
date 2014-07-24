@@ -5,9 +5,11 @@
 	$(function(){
 
 
-		$('#intro').backstretch(template_url+'/images/intro.jpg');
+		//$('#intro').backstretch(template_url+'/images/intro.jpg');
 
-		$('.processing').backstretch(template_url+'/images/processing.jpg');
+		//$('.processing').backstretch(template_url+'/images/processing.jpg');
+
+		
 
 		$('form').validate();
 

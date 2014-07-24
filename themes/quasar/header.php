@@ -22,6 +22,10 @@
 
 			<div id="intro" class="intro">
 
+				<div class="processing">
+					<canvas data-processing-sources="<?php echo THEMEPATH; ?>js/mouseSparkler.pde"  id="processing"></canvas>
+				</div>
+
 				<div class="centro columna c-3 medium-6">
 
 					<div class="centro-in">
@@ -32,13 +36,13 @@
 							</a>
 						</h1>
 
-						<a class="boton mouse columna c-6 activo">
+						<!--<a class="boton mouse columna c-6 activo">
 							mouse
-						</a><!-- boton -->
+						</a> 
 
 						<a class="boton camara columna c-6">
 							cámara
-						</a><!-- boton -->
+						</a> -->
 
 						<div class="clear margin-bottom"></div>
 
