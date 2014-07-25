@@ -158,7 +158,7 @@ figure {margin: 0;}
 
 //layout
 .container{ min-width: 300px; }
-.width{ width: 90%; min-width: 300px; margin-left: auto; margin-right: auto; }
+.width{ width: 90%; min-width: 300px; max-width: 1024px; margin-left: auto; margin-right: auto; }
 .full{ width: 100% !important;
   //img{ width: 100%; height: auto; }
 }
@@ -234,7 +234,13 @@ body, html{ width: 100%; height: 100%; background: @background; .font; color: @o
 	h1{ margin: 0 0 @margen 0; }
 }
 
+
+.intro {
+  canvas { position: absolute; top:0; left:0; width: 100%; height: 100%;}
+}
+
 .seccion{
+    canvas { width: 100%; height: 300px; }
 
 	h2{}
 

@@ -7,7 +7,7 @@
 ?>
 
 	<div class="seccion processing">
-
+		<canvas data-processing-sources="<?php echo THEMEPATH; ?>js/colorChains.pde"  id="processing"></canvas>
 	</div><!-- processing -->
 
 	<div class="clear"></div>
