@@ -86,7 +86,7 @@ figure {margin: 0;}
 @claro: 	#fff;
 @obscuro: 	#333;
 @highlight:	#2a2b7a;
-@background:#d7d7d7;
+@background:#f9f9f9;
 
 @twitter:     #2aa8df;
 @facebook:    #3c5a97;
@@ -363,7 +363,7 @@ form{ margin-bottom: @margen !important;
 	.no-medium{ display: none; }
 
 	nav{
-		a{ .font(.8em, .8em, 'gotham-book'); 
+		a{ .font(.8em, .8em, 'gotham-book');
 			&:hover, &.activo{ color: @highlight; }
 		}
 	}
@@ -433,8 +433,8 @@ form{ margin-bottom: @margen !important;
 	form {
 		label { .font(1em, 1.2em, 'gotham-book'); }
 	}
-	
-	footer{ 
+
+	footer{
 		p{ .font(12px, 14px, 'gotham-book');  }
 	}
 
@@ -462,7 +462,7 @@ form{ margin-bottom: @margen !important;
   overflow-y: auto;
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
   font-size: 15px;
-  background: #F9F9F9;
+  background: darken(@background, 40%);
   color: @obscuro;
 }
 .sidr .sidr-inner {
@@ -521,7 +521,7 @@ form{ margin-bottom: @margen !important;
   display: block;
   margin: 0;
   line-height: 48px;
-  border-bottom: 1px solid @obscuro;
+  border-bottom: 1px solid darken(@claro, 30%);
 }
 .sidr ul li:hover,
 .sidr ul li.active,
