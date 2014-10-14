@@ -1,17 +1,17 @@
+ArrayList sparkle = new ArrayList();
+ 
 
 void setup()
 {
-  size(800, 800);
+  jProcessingJS(this, {fullscreen:true, mouseoverlay:true} );
   noStroke();
   smooth();
+
+
   //noCursor();
-  Color morado = (129, 40, 143);
-  color azul_claro = (0, 173, 239);
-  color azul_obscuro = (42, 43, 122);
 }
  
-ArrayList sparkle = new ArrayList();
- 
+
 void draw()
 {
   background(0);
