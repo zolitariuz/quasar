@@ -9,7 +9,7 @@
 
 		//$('.processing').backstretch(template_url+'/images/processing.jpg');
 
-		
+
 
 		$('form').validate();
 
