@@ -71,6 +71,7 @@
 (function(e){var t=!1,i=!1,n={isUrl:function(e){var t=RegExp("^(https?:\\/\\/)?((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|((\\d{1,3}\\.){3}\\d{1,3}))(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*(\\?[;&a-z\\d%_.~+=-]*)?(\\#[-a-z\\d_]*)?$","i");return t.test(e)?!0:!1},loadContent:function(e,t){e.html(t)},addPrefix:function(e){var t=e.attr("id"),i=e.attr("class");"string"==typeof t&&""!==t&&e.attr("id",t.replace(/([A-Za-z0-9_.\-]+)/g,"sidr-id-$1")),"string"==typeof i&&""!==i&&"sidr-inner"!==i&&e.attr("class",i.replace(/([A-Za-z0-9_.\-]+)/g,"sidr-class-$1")),e.removeAttr("style")},execute:function(n,s,a){"function"==typeof s?(a=s,s="sidr"):s||(s="sidr");var r,d,l,c=e("#"+s),u=e(c.data("body")),f=e("html"),p=c.outerWidth(!0),g=c.data("speed"),h=c.data("side"),m=c.data("displace"),v=c.data("onOpen"),y=c.data("onClose"),x="sidr"===s?"sidr-open":"sidr-open "+s+"-open";if("open"===n||"toggle"===n&&!c.is(":visible")){if(c.is(":visible")||t)return;if(i!==!1)return o.close(i,function(){o.open(s)}),void 0;t=!0,"left"===h?(r={left:p+"px"},d={left:"0px"}):(r={right:p+"px"},d={right:"0px"}),u.is("body")&&(l=f.scrollTop(),f.css("overflow-x","hidden").scrollTop(l)),m?u.addClass("sidr-animating").css({width:u.width(),position:"absolute"}).animate(r,g,function(){e(this).addClass(x)}):setTimeout(function(){e(this).addClass(x)},g),c.css("display","block").animate(d,g,function(){t=!1,i=s,"function"==typeof a&&a(s),u.removeClass("sidr-animating")}),v()}else{if(!c.is(":visible")||t)return;t=!0,"left"===h?(r={left:0},d={left:"-"+p+"px"}):(r={right:0},d={right:"-"+p+"px"}),u.is("body")&&(l=f.scrollTop(),f.removeAttr("style").scrollTop(l)),u.addClass("sidr-animating").animate(r,g).removeClass(x),c.animate(d,g,function(){c.removeAttr("style").hide(),u.removeAttr("style"),e("html").removeAttr("style"),t=!1,i=!1,"function"==typeof a&&a(s),u.removeClass("sidr-animating")}),y()}}},o={open:function(e,t){n.execute("open",e,t)},close:function(e,t){n.execute("close",e,t)},toggle:function(e,t){n.execute("toggle",e,t)},toogle:function(e,t){n.execute("toggle",e,t)}};e.sidr=function(t){return o[t]?o[t].apply(this,Array.prototype.slice.call(arguments,1)):"function"!=typeof t&&"string"!=typeof t&&t?(e.error("Method "+t+" does not exist on jQuery.sidr"),void 0):o.toggle.apply(this,arguments)},e.fn.sidr=function(t){var i=e.extend({name:"sidr",speed:200,side:"left",source:null,renaming:!0,body:"body",displace:!0,onOpen:function(){},onClose:function(){}},t),s=i.name,a=e("#"+s);if(0===a.length&&(a=e("<div />").attr("id",s).appendTo(e("body"))),a.addClass("sidr").addClass(i.side).data({speed:i.speed,side:i.side,body:i.body,displace:i.displace,onOpen:i.onOpen,onClose:i.onClose}),"function"==typeof i.source){var r=i.source(s);n.loadContent(a,r)}else if("string"==typeof i.source&&n.isUrl(i.source))e.get(i.source,function(e){n.loadContent(a,e)});else if("string"==typeof i.source){var d="",l=i.source.split(",");if(e.each(l,function(t,i){d+='<div class="sidr-inner">'+e(i).html()+"</div>"}),i.renaming){var c=e("<div />").html(d);c.find("*").each(function(t,i){var o=e(i);n.addPrefix(o)}),d=c.html()}n.loadContent(a,d)}else null!==i.source&&e.error("Invalid Sidr Source");return this.each(function(){var t=e(this),i=t.data("sidr");i||(t.data("sidr",s),"ontouchstart"in document.documentElement?(t.bind("touchstart",function(e){e.originalEvent.touches[0],this.touched=e.timeStamp}),t.bind("touchend",function(e){var t=Math.abs(e.timeStamp-this.touched);200>t&&(e.preventDefault(),o.toggle(s))})):t.click(function(e){e.preventDefault(),o.toggle(s)}))})}})(jQuery);
 
 
+
 (function e$$0(x,Q,k){function h(a,b){if(!Q[a]){if(!x[a]){var d="function"==typeof require&&require;if(!b&&d)return d(a,!0);if(m)return m(a,!0);throw Error("Cannot find module '"+a+"'");}d=Q[a]={exports:{}};x[a][0].call(d.exports,function(f){var b=x[a][1][f];return h(b?b:f)},d,d.exports,e$$0,x,Q,k)}return Q[a].exports}for(var m="function"==typeof require&&require,n=0;n<k.length;n++)h(k[n]);return h})({1:[function(D,x,Q){x={isDomPresent:!0,navigator:navigator,window:window,document:document,ajax:function(k){var h=
 new XMLHttpRequest;h.open("GET",k,!1);h.overrideMimeType&&h.overrideMimeType("text/plain");h.setRequestHeader("If-Modified-Since","Fri, 01 Jan 1960 00:00:00 GMT");h.send(null);if(200!==h.status&&0!==h.status)throw"XMLHttpRequest failed, status code "+h.status;return h.responseText}};window.Processing=D("./src/")(x)},{"./src/":27}],2:[function(D,x,Q){x.exports={name:"Processing.js",version:"1.4.8",dependencies:{argv:"~0.0.2",browserify:"~2.18.1",express:"~3.3.3","node-minify":"~0.7.3",nunjucks:"~0.1.9",
 open:"0.0.3"},devDependencies:{grunt:"~0.4.1","grunt-cli":"~0.1.8","grunt-contrib-jshint":"~0.4.3"}}},{}],3:[function(D,x,Q){x.exports=function(k){if(k instanceof Array){var h=-1;this.hasNext=function(){return++h<k.length};this.next=function(){return k[h]}}else{if(k.iterator instanceof Function)return k.iterator();throw"Unable to iterate: "+k;}}},{}],4:[function(D,x,Q){x.exports={X:0,Y:1,Z:2,R:3,G:4,B:5,A:6,U:7,V:8,NX:9,NY:10,NZ:11,EDGE:12,SR:13,SG:14,SB:15,SA:16,SW:17,TX:18,TY:19,TZ:20,VX:21,VY:22,
@@ -504,3 +505,88 @@ PConstants:d,PShape:Q,XMLElement:r,colors:k.colors}),d=k.defaultScope({ArrayList
 "./Parser/Parser":25,"./Processing":26}]},{},[1]);
 
 function jProcessingJS(e,t){if(typeof e=="object"){var n={fullscreen:false,responsive:true,mouseoverlay:false,preventmouse:true,touchenabled:true,optmath:false};if(typeof t=="undefined"){var t=n}else{for(key in n){if(!t[key])t[key]=n[key]}}e.canvas=e.externals.canvas;e.canvas.style.outline="none";e.canvas.style["-webkit-tap-highlight-color"]="rgba(255, 255, 255, 0)";e.transBackground=function(){this.background(0,0)};if(t.responsive||t.mouseoverlay){var r=function(e){var t=e.offsetParent;var n=0;var r=0;while(t){n+=t.offsetLeft;r+=t.offsetTop;t=t.offsetParent}var i=e.offsetLeft+n;var s=e.offsetTop+r;return new Array(i,s)}}if(t.fullscreen){e.canvasX=0;e.canvasY=0;var i=function(){e.size(window.innerWidth,window.innerHeight,e.externals.context)};var s=window.onresize;window.onresize=function(){if(s)s();i()};i();var o=getComputedStyle(e.canvas)["position"];if(o!="fixed"&&o!="absolute"){e.canvas.style.position="fixed"}}else if(t.responsive){var i=function(){var t=r(e.canvas);e.canvasX=t[0];e.canvasY=t[1];e.size(e.canvas.offsetWidth,e.canvas.offsetHeight,e.externals.context)};var s=window.onresize;window.onresize=function(){if(s)s();i()};i()}else if(t.mouseoverlay){var i=function(){var t=r(e.canvas);e.canvasX=t[0];e.canvasY=t[1]};var s=window.onresize;window.onresize=function(){if(s)s();i()};i()}if(t.mouseoverlay){if(typeof e.mouseMoved=="function"){e.mouseMoved_=e.mouseMoved}else{e.mouseMoved_=function(){}}e.mouseMoved=function(){};if(typeof e.mouseDragged=="function"){e.mouseDragged_=e.mouseDragged}else{e.mouseDragged_=function(){}}e.mouseDragged=function(){};if(typeof e.mouseOver=="function"){e.mouseOver_=e.mouseOver}else{e.mouseOver_=function(){}}e.mouseOver=function(){};if(typeof e.mouseOut=="function"){e.mouseOut_=e.mouseOut}else{e.mouseOut_=function(){}}e.mouseOut=function(){};if(typeof e.mousePressed=="function"){e.mousePressed_=e.mousePressed}else{e.mousePressed_=function(){}}e.mousePressed=function(){};if(typeof e.mouseReleased=="function"){e.mouseReleased_=e.mouseReleased}else{e.mouseReleased_=function(){}}e.mouseReleased=function(){};if(typeof e.mouseClicked=="function"){e.mouseClicked_=e.mouseClicked}else{e.mouseClicked_=function(){}}e.mouseClicked=function(){};e.updateMousePosition=function(){};var u=false;var a=function(t,n){var r=t-e.canvasX;var i=n-e.canvasY;if(!u&&r>0&&r<e.width&&i>0&&i<e.height){u=true;e.mouseOver_()}if(u&&(r<=0||r>=e.width||i<=0||i>=e.height)){u=false;e.mouseOut_()}if(u){e.pmouseX=e.mouseX;e.pmouseY=e.mouseY;e.mouseX=r;e.mouseY=i;e.mouseMoved_();if(e.__mousePressed)e.mouseDragged_()}};var f=function(t){if(u){switch(t){case 1:e.mouseButton=37;break;case 2:e.mouseButton=3;break;case 3:e.mouseButton=39;break}e.__mousePressed=true;e.mousePressed_()}};var l=function(){if(u){e.__mousePressed=false;e.mouseReleased_();e.mouseClicked_()}};var c=function(e){a(e.pageX,e.pageY)};var h=function(e){e.preventDefault();var t=e.originalEvent.changedTouches[0];a(t.pageX,t.pageY)};var p=function(e){if(t.preventmouse){e.preventDefault()}f(e.which)};var d=function(e){e.preventDefault();f(1)};var v=function(e){if(t.preventmouse){e.preventDefault()}l()};var m=function(e){e.preventDefault();l()};document.addEventListener("mousemove",c,false);document.addEventListener("mousedown",p,false);document.addEventListener("mouseup",v,false);if(t.touchenabled){document.addEventListener("touchmove",h,false);document.addEventListener("touchstart",d,false);document.addEventListener("touchend",m,false)}}if(t.optMath){e.round=function(e){return.5+e<<0};e.floor=function(e){return e>>0};e.abs=function(e){return e<0?~(e++):e};e.min=function(e,t){return e<t?e:t}}}}
+
+
+/*global jQuery */
+/*jshint browser:true */
+/*!
+* FitVids 1.1
+*
+* Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+*
+*/
+
+;(function( $ ){
+
+  'use strict';
+
+  $.fn.fitVids = function( options ) {
+    var settings = {
+      customSelector: null,
+      ignore: null
+    };
+
+    if(!document.getElementById('fit-vids-style')) {
+      // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
+      var head = document.head || document.getElementsByTagName('head')[0];
+      var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
+      var div = document.createElement("div");
+      div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
+      head.appendChild(div.childNodes[1]);
+    }
+
+    if ( options ) {
+      $.extend( settings, options );
+    }
+
+    return this.each(function(){
+      var selectors = [
+        'iframe[src*="player.vimeo.com"]',
+        'iframe[src*="youtube.com"]',
+        'iframe[src*="youtube-nocookie.com"]',
+        'iframe[src*="kickstarter.com"][src*="video.html"]',
+        'object',
+        'embed'
+      ];
+
+      if (settings.customSelector) {
+        selectors.push(settings.customSelector);
+      }
+
+      var ignoreList = '.fitvidsignore';
+
+      if(settings.ignore) {
+        ignoreList = ignoreList + ', ' + settings.ignore;
+      }
+
+      var $allVideos = $(this).find(selectors.join(','));
+      $allVideos = $allVideos.not('object object'); // SwfObj conflict patch
+      $allVideos = $allVideos.not(ignoreList); // Disable FitVids on this video.
+
+      $allVideos.each(function(count){
+        var $this = $(this);
+        if($this.parents(ignoreList).length > 0) {
+          return; // Disable FitVids on this video.
+        }
+        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+        if ((!$this.css('height') && !$this.css('width')) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
+        {
+          $this.attr('height', 9);
+          $this.attr('width', 16);
+        }
+        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
+            width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
+            aspectRatio = height / width;
+        if(!$this.attr('id')){
+          var videoID = 'fitvid' + count;
+          $this.attr('id', videoID);
+        }
+        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+'%');
+        $this.removeAttr('height').removeAttr('width');
+      });
+    });
+  };
+// Works with either jQuery or Zepto
+})( window.jQuery || window.Zepto );

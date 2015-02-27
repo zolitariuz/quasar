@@ -31,14 +31,14 @@
 					<div class="centro-in">
 
 						<h1 class="columna c-8 center" >
-							<a href="<?php home_url(); ?>">
+							<a href="<?php echo site_url('home'); ?>">
 								<img src="<?php echo THEMEPATH; ?>/images/logo-quasar-blanco.png" alt="" />
 							</a>
 						</h1>
 
 						<!--<a class="boton mouse columna c-6 activo">
 							mouse
-						</a> 
+						</a>
 
 						<a class="boton camara columna c-6">
 							cámara
@@ -66,53 +66,101 @@
 		<?php if ( ! is_home() ) {?>
 
 			<div class="container">
-
-				<header>
-
+				<header class="[ clearfix ]">
+					<div class="[ width ][ margin-top ][ no-small ]">
+						<?php echo qtrans_generateLanguageSelectCode('text'); ?>
+					</div>
 					<nav class="width clearfix no-small">
-
-						<a class="columna c-2 <?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/proyectos' ); ?>">Proyectos</a>
-
+						<a class="columna c-2 <?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/proyectos' ); ?>">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+								Proyectos
+							<?php } else { ?>
+								Projects
+							<?php } ?>
+						</a>
 						<img class="separador columna c-1" src="<?php echo THEMEPATH; ?>/images/separador.png" alt="">
-
-						<a class="columna c-2 <?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/clientes' ); ?>">Clientes</a>
-
+						<a class="columna c-2 <?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/clientes' ); ?>">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+								Clientes
+							<?php } else { ?>
+								Clients
+							<?php } ?>
+						</a>
 						<h1 class="columna c-2 logo" >
-							<a class="span c-6 center" href="<?php echo home_url(); ?>">
+							<a class="span c-6 center" href="<?php echo site_url('home'); ?>">
 								<img src="<?php echo THEMEPATH; ?>/images/logo-quasar.png" alt="" />
 							</a>
 						</h1>
-
-						<a class="columna c-2 <?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'nosotros' ); ?>">Nosotros</a>
-
+						<a class="columna c-2 <?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'nosotros' ); ?>">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+								Nosotros
+							<?php } else { ?>
+								About us
+							<?php } ?>
+						</a>
 						<img class="separador columna c-1" src="<?php echo THEMEPATH; ?>/images/separador.png" alt="">
-
-						<a class="columna c-2 <?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'contacto' ); ?>">Contacto</a>
-
+						<a class="columna c-2 <?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'contacto' ); ?>">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+								Contacto
+							<?php } else { ?>
+								Contact
+							<?php } ?>
+						</a>
 					</nav>
-
 					<!-- menú móvil -->
-					<h1 class="columna c-6 right logo small no-medium" >
+
+					<div class="columna c-3 mobile-header">
+						<a href="#sidr-main" id="responsive-menu-btn" class="btn-menu-movil"><i class="fa fa-bars"></i></a>
+					</div>
+					<h1 class="columna c-6 logo small no-medium" >
 						<a class="c-6 center" href="<?php echo home_url(); ?>">
 							<img src="<?php echo THEMEPATH; ?>/images/logo-quasar-movil.png" alt="" />
 						</a>
 					</h1>
-					
-					<div class="columna c-4 left mobile-header">
-						<a href="#sidr-main" id="responsive-menu-btn" class="btn-menu-movil"><i class="fa fa-bars"></i></a>
-					</div>
 
 					<div class="sidr no-medium small" id="sidr">
-					  <!-- Your content -->
-					  <ul>
-					    <li><a class="<?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/proyectos' ); ?>">Proyectos</a></li>
-					    <li><a class="<?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/clientes' ); ?>">Clientes</a></li>
-					    <li><a class="<?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'nosotros' ); ?>">Nosotros</a></li>
-					    <li><a class="<?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'contacto' ); ?>">Contacto</a></li>
-					  </ul>
-
+						<div class="[ width ][ no-small ]">
+							<?php echo qtrans_generateLanguageSelectCode('text'); ?>
+						</div>
+						<ul>
+							<li>
+								<a class="<?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/proyectos' ); ?>">
+									<?php if (qtrans_getLanguage() == 'es'){ ?>
+										Proyectos
+									<?php } else { ?>
+										Projects
+									<?php } ?>
+								</a>
+							</li>
+							<li>
+								<a class="<?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/clientes' ); ?>">
+								<?php if (qtrans_getLanguage() == 'es'){ ?>
+									Clientes
+								<?php } else { ?>
+									Clients
+								<?php } ?>
+								</a>
+							</li>
+							<li>
+								<a class="<?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'nosotros' ); ?>">
+									<?php if (qtrans_getLanguage() == 'es'){ ?>
+										Nosotros
+									<?php } else { ?>
+										About us
+									<?php } ?>
+								</a>
+							</li>
+							<li>
+								<a class="<?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'contacto' ); ?>">
+								<?php if (qtrans_getLanguage() == 'es'){ ?>
+									Contacto
+								<?php } else { ?>
+									Contact
+								<?php } ?>
+								</a>
+							</li>
+						</ul>
 					</div>
-
 				</header>
 			<div class="main">
 		<?php } ?>

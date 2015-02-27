@@ -59,25 +59,25 @@ figure {margin: 0;}
 /*** FONTFACE ***/
 
 @font-face {
-    font-family: 'gotham-book';
-    src: url('fonts/gotham-book.eot');
-    src: url('fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
-         url('fonts/gotham-book.woff') format('woff'),
-         url('fonts/gotham-book.ttf') format('truetype'),
-         url('fonts/gotham-book.svg#gothambook') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'gotham-book';
+	src: url('fonts/gotham-book.eot');
+	src: url('fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/gotham-book.woff') format('woff'),
+		 url('fonts/gotham-book.ttf') format('truetype'),
+		 url('fonts/gotham-book.svg#gothambook') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'bitter';
-    src: url('fonts/bitter-regular-webfont.eot');
-    src: url('fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/bitter-regular-webfont.woff') format('woff'),
-         url('fonts/bitter-regular-webfont.ttf') format('truetype'),
-         url('fonts/bitter-regular-webfont.svg#bitterregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'bitter';
+	src: url('fonts/bitter-regular-webfont.eot');
+	src: url('fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/bitter-regular-webfont.woff') format('woff'),
+		 url('fonts/bitter-regular-webfont.ttf') format('truetype'),
+		 url('fonts/bitter-regular-webfont.svg#bitterregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
@@ -155,6 +155,7 @@ figure {margin: 0;}
 .no-margin-bottom{ margin-bottom: 0 !important; }
 
 .margin-bottom{ margin-bottom: @margen; }
+.margin-top{ margin-top: @margen; }
 
 //layout
 .container{ min-width: 300px; }
@@ -240,11 +241,14 @@ body, html{ width: 100%; height: 100%; background: @background; .font; color: @o
 }
 
 .seccion{
-    canvas { width: 100%; height: 300px; }
+	canvas { width: 100%; height: 300px; }
 
 	h2{}
 
-	p{ width: 56.1%; margin: 0 auto (@margen*2) auto; }
+	p{
+		width: 56.1%; margin: 0 auto (@margen*2) auto;
+		font-size: 16px; line-height: 30px;
+	}
 
 	img{ width: 81%; height: auto; display: block; margin: 0 auto (@margen*2) auto; }
 
@@ -285,12 +289,43 @@ h2{ .font(1.5em, 1.5em, 'gotham-book'); text-transform: uppercase; text-align: c
 
 .btn-menu-movil { .font(3em, 1em); color: @obscuro; display: none;}
 
+#qtranslate-chooser{
+	margin: 0;
+	.font(0.85em, 1, 'gotham-book');
+	list-style: none;
+	text-align: right;
+}
+
+#qtranslate-chooser li{
+	display: inline-block;
+	margin: 0 5px;
+}
+
+#qtranslate-chooser li.active{
+	a{
+		color: @highlight;
+	}
+}
+
+#qtranslate-chooser li a{
+	color: @obscuro;
+	text-decoration: none;
+}
+
+#qtranslate-chooser li a{
+
+}
+
+
+
+
+
 /*** MAIN ***/
 
 /*** FOOTER ***/
 
-footer{ padding: @margen 0; border-top: 2px solid @highlight;
-	p{ text-align: center; .font(14px, 18px, 'gotham-book'); color: @highlight; }
+footer{ padding: @margen 0; background: @highlight;
+	p{ text-align: center; .font(14px, 18px, 'gotham-book'); color: @claro; }
 }
 
 /*** INTRO ***/
@@ -444,7 +479,10 @@ form{ margin-bottom: @margen !important;
 		p{ .font(12px, 14px, 'gotham-book');  }
 	}
 
-	.btn-menu-movil { display: block; margin: 20px 0 0 20px;}
+	.btn-menu-movil {
+		display: block;
+		margin: 10px 0 0 20px;
+	}
 
 
 
@@ -468,8 +506,8 @@ form{ margin-bottom: @margen !important;
   overflow-y: auto;
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
   font-size: 15px;
-  background: darken(@background, 40%);
-  color: @obscuro;
+  background: @obscuro;
+  color: @claro;
 }
 .sidr .sidr-inner {
   padding: 0 0 15px;
@@ -523,6 +561,13 @@ form{ margin-bottom: @margen !important;
   margin: 0 0 15px;
   padding: 0;
 }
+
+.sidr{
+	#sidr-id-qtranslate-chooser{
+		margin: 0;
+	}
+}
+
 .sidr ul li {
   display: block;
   margin: 0;
@@ -549,7 +594,7 @@ form{ margin-bottom: @margen !important;
   padding: 0 15px;
   display: block;
   text-decoration: none;
-  color: @obscuro;
+  color: @claro;
 }
 
 .sidr ul li a.activo { background: @highlight; color: @claro; cursor: default;}

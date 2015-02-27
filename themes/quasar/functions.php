@@ -255,3 +255,18 @@ add_filter('the_content', 'filter_ptags_on_images');
 			OR isset($query->post_title) AND preg_match("/$string/i", remove_accents(str_replace(' ', '-', $query->post_title) ) ) )
 			echo 'active';
 	}
+
+
+
+
+
+function get_ID_by_slug($page_slug) {
+
+	$page = get_page_by_path($page_slug);
+	if ($page) {
+		return $page->ID;
+	} else {
+		return null;
+	}
+
+}

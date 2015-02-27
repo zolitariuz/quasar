@@ -5,9 +5,9 @@
 	$(function(){
 
 
-		//$('#intro').backstretch(template_url+'/images/intro.jpg');
-
-		//$('.processing').backstretch(template_url+'/images/processing.jpg');
+		if ( $('.fitvid').length > 0 ){
+			 $('.fitvid').fitVids();
+		}
 
 
 
