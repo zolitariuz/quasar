@@ -110,11 +110,11 @@
 		// add_image_size( 'size_name', 200, 200, true );
 
 		// cambiar el tamaño del thumbnail
-		/*
-		update_option( 'thumbnail_size_h', 100 );
-		update_option( 'thumbnail_size_w', 200 );
-		update_option( 'thumbnail_crop', false );
-		*/
+
+		update_option( 'thumbnail_size_h', 216 );
+		update_option( 'thumbnail_size_w', 288 );
+		update_option( 'thumbnail_crop', true );
+
 	}
 
 
