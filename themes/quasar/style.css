@@ -1034,3 +1034,14 @@ form textarea {
 .sidr input[type=submit]:hover {
   background: rgba(255, 255, 255, 0.9);
 }
+.gallery-item {
+  width: 50% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+  .gallery-item {
+    width: 33.33% !important;
+  }
+}
