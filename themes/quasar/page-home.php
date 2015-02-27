@@ -31,7 +31,7 @@
 			$proyectosQuery = new WP_Query($proyectosArgs);
 			if( $proyectosQuery->have_posts() ) : while( $proyectosQuery->have_posts() ) : $proyectosQuery->the_post(); ?>
 				<div class="post-preview columna c-4 medium-6 small-12">
-					<?php the_post_thumbnail( 'full' ); ?>
+					<?php the_post_thumbnail( 'thumbnail' ); ?>
 					<a href="<?php the_permalink(); ?>">
 						<div class="malla"></div>
 					</a>
