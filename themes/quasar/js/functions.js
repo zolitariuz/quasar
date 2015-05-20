@@ -14,9 +14,6 @@
 		}
 
 
-
-
-
 		$('form').validate();
 
 		toggleMenu();
