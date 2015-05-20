@@ -12,10 +12,11 @@
 
 	<div class="clear"></div>
 	<div class="width clearfix">
-		<div class="clear"></div>
+		<div class="[ clear ]"></div>
 		<div class="seccion ultimos-proyectos clearfix">
 			<h2><?php echo $categoryName; ?></h2>
 			<?php
+				$counter = 1;
 				$categoryArgs 	= array(
 					'category_name'  => $categoryName,
 					'posts_per_page' 	=> '-1',
@@ -32,7 +33,15 @@
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					</div><!-- post-info -->
 				</div><!-- post-preview -->
-			<?php endwhile; endif; wp_reset_postdata(); ?>
+
+				<?php if($counter % 3 == 0){ ?>
+					<div class="[ clear ]"></div>
+				<?php } ?>
+				<?php if($counter % 2 == 0){ ?>
+					<div class="[ clear--medium ]"></div>
+				<?php } ?>
+
+			<?php $counter++; endwhile; endif; wp_reset_postdata(); ?>
 		</div><!-- seccion ultimos-proyectos -->
 
 	</div><!-- width -->

@@ -39,9 +39,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 /*Figures*/
 figure {margin: 0;}
 
-/* Utilities */
+/* Lists */
 .lst_reset, .lst_reset li { margin: 0; padding: 0; list-style: none; }
+
+/**
+ * Clear
+**/
 .clear { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+
+@media ( max-width: 768px ) {
+	.clear{
+		clear: none;
+	}
+	.clear--medium {
+		height:1px;
+		margin:0; padding:0;
+		font-size: 1px; line-height: 0;
+		clear:both;
+	}
+}
+
+@media ( max-width: 480px ){
+	.clear, .clear--medium{
+		clear: none;
+	}
+	.clear--small {
+		height:1px;
+		margin:0; padding:0;
+		font-size: 1px; line-height: 0;
+		clear:both;
+	}
+}
+
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

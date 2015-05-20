@@ -241,13 +241,16 @@ section {
 figure {
   margin: 0;
 }
-/* Utilities */
+/* Lists */
 .lst_reset,
 .lst_reset li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+/**
+ * Clear
+**/
 .clear {
   clear: both;
   height: 1px;
@@ -255,6 +258,33 @@ figure {
   padding: 0;
   font-size: 1px;
   line-height: 0;
+}
+@media (max-width: 768px) {
+  .clear {
+    clear: none;
+  }
+  .clear--medium {
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+  }
+}
+@media (max-width: 480px) {
+  .clear,
+  .clear--medium {
+    clear: none;
+  }
+  .clear--small {
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+  }
 }
 *,
 *:before,
