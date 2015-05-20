@@ -20,7 +20,7 @@
 		<meta name="msapplication-wide310x150logo" content="<?php echo THEMEPATH; ?>images/favicon/widetile.png" />
 		<meta name="msapplication-square310x310logo" content="<?php echo THEMEPATH; ?>images/favicon/largetile.png" />
 
-		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,9 +63,13 @@
 
 						<div class="clear margin-bottom"></div>
 
-						<a href="<?php echo home_url('/home'); ?>" class="block text-center boton full">
-							Entrar
-						</a>
+						<h2><a href="<?php echo home_url('/home'); ?>" class="block text-center boton full">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+								Entrar
+							<?php } else { ?>
+								Enter
+							<?php } ?>
+						</a></h2>
 
 
 
@@ -88,41 +92,57 @@
 						<?php echo qtrans_generateLanguageSelectCode('text'); ?>
 					</div>
 					<nav class="width clearfix no-small">
-						<a class="columna c-2 <?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/proyectos' ); ?>">
-							<?php if (qtrans_getLanguage() == 'es'){ ?>
+						<?php if (qtrans_getLanguage() == 'es'){ ?>
+							<a class="columna c-2 <?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'es/q/proyectos/' ); ?>">
 								Proyectos
-							<?php } else { ?>
-								Projects
-							<?php } ?>
-						</a>
-						<img class="separador columna c-1" src="<?php echo THEMEPATH; ?>/images/separador.png" alt="">
-						<a class="columna c-2 <?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'q/clientes' ); ?>">
-							<?php if (qtrans_getLanguage() == 'es'){ ?>
-								Clientes
-							<?php } else { ?>
-								Clients
-							<?php } ?>
-						</a>
-						<h1 class="columna c-2 logo" >
-							<a class="span c-6 center" href="<?php echo site_url('home'); ?>">
-								<img src="<?php echo THEMEPATH; ?>/images/logo-quasar.png" alt="" />
 							</a>
-						</h1>
-						<a class="columna c-2 <?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'nosotros' ); ?>">
-							<?php if (qtrans_getLanguage() == 'es'){ ?>
-								Nosotros
-							<?php } else { ?>
-								About us
-							<?php } ?>
-						</a>
+						<?php } else { ?>
+							<a class="columna c-2 <?php if ( is_category('proyectos') ){ echo 'activo'; } ?>" href="<?php echo home_url( '/en/q/proyectos/' ); ?>">
+								Projects
+							</a>
+						<?php } ?>
 						<img class="separador columna c-1" src="<?php echo THEMEPATH; ?>/images/separador.png" alt="">
-						<a class="columna c-2 <?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'contacto' ); ?>">
+						<?php if (qtrans_getLanguage() == 'es'){ ?>
+							<a class="columna c-2 <?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'es/q/clientes/' ); ?>">
+								Clientes
+							</a>
+						<?php } else { ?>
+							<a class="columna c-2 <?php if ( is_category('clientes') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'en/q/clientes/' ); ?>">
+								Clients
+							</a>
+						<?php } ?>
+						<h1 class="columna c-2 logo" >
 							<?php if (qtrans_getLanguage() == 'es'){ ?>
-								Contacto
+								<a class="span c-6 center" href="<?php echo site_url('es/home/'); ?>">
+									<img src="<?php echo THEMEPATH; ?>/images/logo-quasar.png" alt="" />
+								</a>
 							<?php } else { ?>
-								Contact
+								<a class="span c-6 center" href="<?php echo site_url('en/home/'); ?>">
+									<img src="<?php echo THEMEPATH; ?>/images/logo-quasar.png" alt="" />
+								</a>
 							<?php } ?>
-						</a>
+						</h1>
+						<?php if (qtrans_getLanguage() == 'es'){ ?>
+							<a class="columna c-2 <?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'es/nosotros/' ); ?>">
+								Nosotros
+							</a>
+						<?php } else { ?>
+							<a class="columna c-2 <?php if ( is_page('nosotros') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'en/nosotros/' ); ?>">
+								About us
+							</a>
+						<?php } ?>
+
+						<img class="separador columna c-1" src="<?php echo THEMEPATH; ?>/images/separador.png" alt="">
+
+						<?php if (qtrans_getLanguage() == 'es'){ ?>
+							<a class="columna c-2 <?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'es/contacto/' ); ?>">
+								Contacto
+							</a>
+						<?php } else { ?>
+							<a class="columna c-2 <?php if ( is_page('contacto') ){ echo 'activo'; } ?>" href="<?php echo home_url( 'en/contacto/' ); ?>">
+								Contact
+							</a>
+						<?php } ?>
 					</nav>
 					<!-- menú móvil -->
 

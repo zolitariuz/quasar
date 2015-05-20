@@ -606,6 +606,15 @@ footer p {
   font: 14px / 18px 'gotham-book';
   color: #ffffff;
 }
+.redes {
+  text-align: center;
+  font-size: 24px;
+}
+.redes a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
 /*** INTRO ***/
 .intro {
   width: 100%;

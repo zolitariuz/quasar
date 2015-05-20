@@ -3,9 +3,9 @@
 	the_post();
 ?>
 
-	<div class="seccion processing">
+	<!--<div class="seccion processing">
 		<canvas data-processing-sources="<?php echo THEMEPATH; ?>js/colorChains.pde"  id="processing"></canvas>
-	</div><!-- processing -->
+	</div> processing -->
 
 	<div class="clear"></div>
 
@@ -13,7 +13,7 @@
 
 		<div class="seccion ultimos-proyectos clearfix">
 
-			<h2>Nosotros</h2>
+			<h2><?php the_title(); ?></h2>
 
 			<?php the_content(); ?>
 
