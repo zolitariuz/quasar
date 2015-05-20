@@ -9,6 +9,9 @@
 			 $('.fitvid').fitVids();
 		}
 
+		if ( $('.ultimos-proyectos iframe').length > 0 ){
+			$('.ultimos-proyectos').fitVids();
+		}
 
 
 		$('form').validate();

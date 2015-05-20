@@ -14,8 +14,8 @@ Licensed under the BSD License.
 http://yuilibrary.com/license/
 */
 html {
-  color: #000;
-  background: #ffffff;
+  color: #FFF;
+  background: #000000;
 }
 body,
 div,
@@ -458,6 +458,10 @@ p {
 }
 .text-center {
   text-align: center;
+}
+.dark-background {
+  background-color: #333333;
+  color: #f9f9f9;
 }
 .small {
   display: none;
