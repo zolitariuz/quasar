@@ -6,9 +6,9 @@
 	$categorySlug = $category->category_nicename;
 ?>
 
-	<div class="seccion processing">
+	<!--<div class="seccion processing">
 		<canvas data-processing-sources="<?php echo THEMEPATH; ?>js/colorChains.pde"  id="processing"></canvas>
-	</div><!-- processing -->
+	</div> processing -->
 
 	<div class="clear"></div>
 	<div class="width clearfix">
