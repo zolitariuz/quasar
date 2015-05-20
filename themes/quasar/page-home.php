@@ -26,7 +26,7 @@
 			<?php
 			$proyectosArgs = array(
 				'category_name' 	=> 'proyectos',
-				'posts_per_page' 	=> '6'
+				'posts_per_page' 	=> '10'
 			);
 			$proyectosQuery = new WP_Query($proyectosArgs);
 			if( $proyectosQuery->have_posts() ) : while( $proyectosQuery->have_posts() ) : $proyectosQuery->the_post(); ?>

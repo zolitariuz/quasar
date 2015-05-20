@@ -17,7 +17,8 @@
 			<h2><?php echo $categoryName; ?></h2>
 			<?php
 				$categoryArgs 	= array(
-					'category_name'  => $categoryName
+					'category_name'  => $categoryName,
+					'posts_per_page' 	=> '-1',
 				);
 				//$categoryQuery 	= new WP_Query($categoryArgs);
 			?>

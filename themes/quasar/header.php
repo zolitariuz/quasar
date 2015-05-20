@@ -20,9 +20,9 @@
 
 		<?php if ( is_home() ) {?>
 
-			<div id="intro" class="intro">
+			<div id="intro" class="intro dark-background">
 
-				<div class="processing">
+				<div class="processing no-medium">
 					<canvas data-processing-sources="<?php echo THEMEPATH; ?>js/mouseSparkler.pde"  id="processing"></canvas>
 				</div>
 
